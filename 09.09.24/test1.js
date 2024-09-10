@@ -13,4 +13,4 @@ do {
   i++;
 }
 while (i < 10);
-console.log(text);
+console.log(text)
