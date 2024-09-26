@@ -103,7 +103,7 @@ console.log(total);
 
 
 
-// 
+// sum7
 let n=121;
 if(n==2){
     console.log("It is prime")
@@ -121,7 +121,7 @@ else{
 
 
 
-// 
+// sum8
 
 
 function printEvenNumbers(n){
@@ -135,7 +135,7 @@ function printEvenNumbers(n){
 printEvenNumbers(10);
 
 
-// 
+// sum9
 
 function sumNumbers(n) {
     let sum = 0;
@@ -148,7 +148,7 @@ function sumNumbers(n) {
   console.log(sumNumbers(10));
 
 
-//   
+//   sum10
 function classifyNumber(n){
     if(n%3===0){
         console.log("It is divisible by 3");
@@ -171,7 +171,7 @@ classifyNumber(9);
 
 
 
-// 
+// sum11
 
 function printMultiplicationTable(n, r) {
     for (let i = r; i > 0; i--) {
@@ -181,12 +181,132 @@ function printMultiplicationTable(n, r) {
 printMultiplicationTable(5,6);
 
 
-// 
+// sum12
 
 
 function  getDayName(){
-    switch(n){
+    switch(day){
         case 1:
-            console.log("z")
+            console.log("Monday ");
+            break;
+        case 2:
+            console.log("Tuesday");
+            break;
+        case 3:
+            console.log("wednesday");
+            break;
+        case 4: 
+            console.log("Thursday");
+            break;
+        case 5:
+            console.log("Friday");
+            break;
+        case 6:
+            console.log("Saturday");
+            break;
+        case 7:
+            console.log("Sunday");
+            break;
+        default:
+            console.log("day not found");
+            break;    
+
     }
 }
+let day=5;
+getDayName();
+
+
+// sum13
+
+let lapCount = 0;
+let totalLaps = 10;
+while (lapCount < totalLaps) {
+    lapCount++;
+    console.log(`Lap ${lapCount} completed!`);
+}
+console.log("The robot has completed all laps!");
+
+
+
+// sum14
+
+let batteryLevel=100;
+let Battery=20;
+while(batteryLevel>=Battery){
+    console.log(`The battery is in ${batteryLevel}%`);
+    batteryLevel-=5;
+}
+console.log("the battery is low");
+
+
+
+// sum15
+let Flight=1000;
+while(Flight>0){
+    console.log(`the flight at ${Flight} feet`);
+    Flight-=10;
+}
+console.log("the flight arived");
+
+
+
+ //sum16
+
+
+ function robot(dir){
+    switch(dir){
+        case "north":
+            console.log("move in north");
+            break;
+        case "east":
+            console.log("move in east ");
+            break;
+        case "west ":
+            console.log("move in west ");
+            break;
+        case "south":
+            console.log("move in south ");
+        default:
+            console.log("direction not found");   
+    }
+ }
+ let dir="north";
+robot(dir);
+
+
+
+// sum17
+
+
+function getRunway(destination) {
+    let runway="";
+
+    switch (destination.toLowerCase()) {
+        case 'new york':
+            runway = "Runway 1";
+            break;
+        case 'los angeles':
+            runway ="Runway 2";
+            break;
+        case 'USA':
+            runway = "Runway 3";
+            break;
+        case 'canada':
+            runway = "Runway 4";
+            break;
+        case 'paskisthan':
+            runway = "runway5";
+            break;
+        case 'delhi':
+            runway="runway 6";    
+            break;
+        default:
+            runway = 'Unknown destination. No assigned runway.';
+            break;
+    }
+
+    return runway;
+}
+console.log(getRunway("new york"));
+

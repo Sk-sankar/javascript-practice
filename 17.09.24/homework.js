@@ -74,3 +74,62 @@ for (let i = 0; i < temperatures.length; i++) {
     }
 }
 console.log(regions);
+
+
+
+
+// 
+let dailyExpences=[20,30,40,50];
+let sum=0;
+
+console.log("the daily expenses:"+dailyExpences);
+for(i=0;i<dailyExpences.length;i++){
+    sum+=dailyExpences[i];
+}
+
+console.log("the total expence of the week:"+sum);
+
+
+
+
+// 
+
+let marks=[90,89,97,80,70,99];
+let sum1=0;
+for(i=0;i<marks.length;i++){
+    sum1+=marks[i];
+
+}
+ let result5=sum1/marks.length;
+ console.log(result5);
+
+
+
+//  
+
+let ages=[18,25,26,30,14];
+let adults=ages.filter(function(age){
+    return age>18;
+});
+adults.forEach(function(adult){
+    console.log(adult)
+});
+
+
+// 
+
+
+function countEvenNumbers(arr) {
+    let count = 0;
+    
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            count++;
+        }
+    }
+    
+    return count;
+}
+let num=[1,2,5,7,5,5,33,68,90,4,7,8];
+console.log(countEvenNumbers(num));
+
