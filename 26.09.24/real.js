@@ -19,8 +19,11 @@ console.log(high);
 
 // Write a program that stores an array of 3 decimal numbers. Convert each number to its binary equivalent using the toString(2) method and print the binary values.
 
-let decimal=[10.5,30.5,55.2];
-let binary=decimal.toString(2);
+let decimal=[10,3,5];
+for(i=0;i<decimal.length;i++){
+    binary=decimal[i].toString(2);
+}
+
 console.log(binary);
 
 
@@ -36,7 +39,7 @@ let si=details.map(intrest=>{
     let result=(intrest.principal*intrest.rateOfInterest*intrest.noOfYears)/100;
     return result
 });
-console.log(si);x
+console.log(si);
 
 
 // 
@@ -71,4 +74,33 @@ console.log(totalprice);
 
 // 
 
+let arr1=[30,40,50,60,70];
+let arr2=[50,60,70,80,90];
+for(i=0;i<arr1.length;i++){
+    sub=arr2[i]-arr1[i];
+    percentage=sub/arr1[i]*100;
+
+}
+console.log(percentage+"%");
+
+
+// 
+let set1=[2,3,4,5,6,7];
+let set2=[1,2,3,4,5,6];
+let ans=[...new Set([...set1,...set2])];
+console.log(ans);
+
+// 
+
+
+
+let boo1=[true,false,true];
+let boo2=[false,true,true];
+let len=boo1.length;
+let res=[];
+for(i=0;i<len;i++){
+    ans=boo1[i]&&boo2[i];
+    res.push(ans);
+}
+console.log(res);
 
