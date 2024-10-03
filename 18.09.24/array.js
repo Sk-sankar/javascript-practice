@@ -26,7 +26,7 @@ console.log(animals);
 
 
 let cars=["BMW","FERRARI","BUGATI","AUDI"];
-let b;
+
 let c=[];
 for(i=1;i<=4;i++){
     b=cars.pop()

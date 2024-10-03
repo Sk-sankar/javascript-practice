@@ -4,9 +4,6 @@ while(num>0){
     let a=num%10;
     sum+=a;
     num=Math.trunc(num/10);
-
-   
-    
 }
 console.log(sum);
 
