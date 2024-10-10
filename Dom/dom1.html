@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Example</title>
+</head>
+<body>
+  <h1 id="header">Hello World</h1>
+  <p>This is the first paragraph.</p>
+  <p>This is the second paragraph.</p>
+  <button id="changeText">Change Text</button>
+
+  <script>
+    // Getting references to DOM nodes
+    const header = document.getElementById("header");
+    const paragraphs = document.querySelectorAll("p");
+    const button = document.getElementById("changeText");
+
+    // Manipulating DOM content
+    button.addEventListener("click", () => {
+      header.textContent = "New Heading";
+      paragraphs.forEach(function(x, index)  {
+        x.textContent = `Paragraph ${index+1 } changed!`;
+      });
+    });
+  </script>
+</body>
+</html>

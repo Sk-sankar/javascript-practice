@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color with setInterval</title>
+</head>
+<body>
+    <div id="color-box" style=" margin: 10px; width: 100px; height: 100px; color: aqua; background-color:grey;">
+        Color Box
+    </div>
+    <script>
+        // Function to toggle color
+        function toggleColor() {
+            let colorBox = document.getElementById("color-box");
+            if (colorBox.style.width=== "100px" ){
+                colorBox.style.color = "blue";
+                colorBox.style.height="200px";
+                colorBox.style.width="200px";
+
+                       
+
+            }
+            else if( colorBox.style.width=== "200px" ){
+                colorBox.style.backgroundColor = "black";
+
+                colorBox.style.color = "white";
+                colorBox.style.height="400px";
+                colorBox.style.width="400px";
+                colorBox.style.borderRadius="100%"
+            } 
+            else if( colorBox.style.width=== "400px" ){
+                colorBox.style.backgroundColor = "green";
+                colorBox.style.color = "yellow";
+                colorBox.style.height="600px";
+                colorBox.style.width="600px";
+            } 
+            else {
+                colorBox.style.color = "blue";
+                colorBox.style.width= "100px" ;
+                colorBox.style.height="100px"
+
+            }
+        }
+        // Change the color every 2 seconds (2000 milliseconds)
+        setInterval(toggleColor, 1000);
+    </script>
+</body>
+</html>
