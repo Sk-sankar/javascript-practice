@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Event Listener</title>
+    <style>
+        li {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul id="ul">
+            <li class="lists">hi</li>
+            <li class="lists">hello</li>
+            <li class="lists">welcome</li>
+        </ul>
+        <button id="button">Add li</button>
+        <button id="remove">Remove li</button>
+        <button id="highlight">Highlight</button>
+        <button id="disableAdd">Disable Add li</button>
+        <button id="image">image</button>
+        
+    </div>
+</body>
+
+<script>
+    const button = document.getElementById("button");
+    const remove = document.getElementById("remove");
+    const ul = document.getElementById("ul");
+    const highlight = document.getElementById("highlight");
+    const disableAdd = document.getElementById("disableAdd");
+    const image=document.getElementById("image");
+
+    const link = document.createElement("a");
+    link.textContent = "Click me!";
+    link.setAttribute("href", "https://www.google.com/search?sca_esv=4dbd1c17396be272&rlz=1C1GCEU_en___IN1117&q=thalapathy&source=lnms&fbs=AEQNm0CRraR4AFMOJtZDUPiZk_hDEGW7EwGJ8ltzg0fUf3C5Xd1mhrcmUZ_z_Gw36zS3CIPG8xCRAefxrRYeluhQGyKyv5VKaAKRBGBSbHvCjqfIVh8pMf5tI684fbseRWI69oeFkO9LZQ0GDu2W1SQ-nAKB_zSAlZTqSAyJJoZhLhQbJDO6BdPLqvmKZmniy7iK6s9pKYNC8qaplajHHGubHWd7cJ8K0Q&sa=X&ved=2ahUKEwiVnO3KmYOJAxVjnmMGHdsHMpEQ0pQJegQICRAB&biw=1504&bih=868&dpr=1.5");
+    document.body.appendChild(link);
+
+    // image.addEventListener("click",()=>{
+    // const images=document.createElement("img");
+    // images.textContent="click";
+    // images.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr2_-A-9IhlqdIe6jou69p0OYz2UPUV_CxSQ&s");
+    // document.body.appendChild(images);
+    // })
+
+
+    image.addEventListener("click",()=>{
+        const images=document.createElement("img");
+    images.textContent="click";
+    images.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr2_-A-9IhlqdIe6jou69p0OYz2UPUV_CxSQ&s");
+    ul.appendChild(images);
+    document.getElementById(image).disabled=true;
+
+    });
+      
+   
+  
+
+
+
+
+    
+
+
+    function addListItem() {
+        const newli = document.createElement("li");
+        newli.textContent = "to freshworks";
+        newli.classList.add("lists");
+        ul.appendChild(newli);
+    }
+    button.addEventListener("click", addListItem);
+
+
+    remove.addEventListener("click", () => {
+        const childToRemove = document.querySelector(".lists");
+        childToRemove.remove();
+        
+    });
+
+
+    highlight.addEventListener("click", () => {
+        const allItems = document.querySelectorAll(".lists");
+        allItems.forEach(item => {
+            item.style.backgroundColor = "blue";
+        });
+    });
+
+    disableAdd.addEventListener("click", () => {
+        button.removeEventListener("click", addListItem);
+        alert("The 'Add li' button is now disabled!");
+    });
+
+</script>
+
+</html>
