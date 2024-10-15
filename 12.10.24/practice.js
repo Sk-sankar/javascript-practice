@@ -49,9 +49,9 @@ function star(c,n){
     let x="";
     for(i=1;i<=n;i++){
         x+=c;
-      
+        console.log(x);
     }
-    console.log(x);
+   
 }star("*",3);
 
 
@@ -81,9 +81,9 @@ printRightAlignedPattern(v);
 
 
 function number(n){
-    for(i=n;i>=1;i--){
-    let space=' '.repeat(n - i);
-    let num=(i+" ").repeat(i);
+    for(i=1;i<=n;i++){
+    let space=' '.repeat(i);
+    let num=("* ").repeat(n- i);
     console.log(space+num.trim());
     }
   
