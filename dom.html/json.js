@@ -8,7 +8,7 @@ fetch(url)
     return response.json(); // Parse the JSON from the response
   })
   .then(data => {
-    console.log('Fetched data:', data[1]); // Log the data
+    console.log('Fetched data:', data[0]); // Log the data
     // You can process the data here
   })
   .catch(error => {
