@@ -1,22 +1,22 @@
-let arr=[1,22,3,44,5,44,6,67,67,4]
-    let start=arr[0];
+    let arr=[1,22,3,44,5,44,6,67,67,4]
+        let start=arr[0];
 
 
-    for(i=1;i<arr.length;i++){
-        if(start<arr[i]){
-            start=arr[i];
+        for(i=1;i<arr.length;i++){
+            if(start<arr[i]){
+                start=arr[i];
+            }
+        }
+        let count=0;
+    
+    for(i=0;i<arr.length;i++){
+        
+        if(start==arr[i]){
+                count++;
+                
         }
     }
-    let count=0;
-  
-for(i=0;i<arr.length;i++){
-    
-    if(start==arr[i]){
-            count++;
-            
-    }
-}
-console.log(count);
+    console.log(count);
 
 
 function binarySearch(arr, target) {
