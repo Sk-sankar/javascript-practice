@@ -7,6 +7,7 @@ function searchInNestedArrays(nestedArr, target) {
         for (let j = 0; j < subArray.length; j++) {
             if (subArray[j] === target) {
                 result.push([i, j]); 
+                
             }
         }
     }

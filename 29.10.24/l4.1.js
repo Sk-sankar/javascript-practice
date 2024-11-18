@@ -37,32 +37,104 @@
 // let s="i love you";
 // console.log(s.split(" ").reverse().join(" "));
 
-function lcm(a,b){
-  let   max=Math.max(a,b);
-    while(true){
-               if(max%a===0 && max%b===0){
-                return max;
-               }
-               max++;
+// function lcm(a,b){
+//   let   max=Math.max(a,b);
+//     while(true){
+//                if(max%a===0 && max%b===0){
+//                 return max;
+//                }
+//                max++;
 
-    }
-}
+//     }
+// }
 
-function arr(a){
+// function arr(a){
     
-    while(a.length > 1){
-        let newa=[]; 
-      for(i=0;i<a.length-1;i++){
-        let f=a[i];
-        let l=a[i+1];
-        let lecm=lcm(f,l);
-        newa.push(lecm);
+//     while(a.length > 1){
+//         let newa=[]; 
+//       for(i=0;i<a.length-1;i++){
+//         let f=a[i];
+//         let l=a[i+1];
+//         let lecm=lcm(f,l);
+//         newa.push(lecm);
 
-      }
-      a=newa;
-      console.log("newarray:",a)
+//       }
+//       a=newa;
+//       console.log("newarray:",a)
+//     }
+//     return a[0]
+// }
+// let result=arr([1,2,3,4,5,6]);
+// console.log(result);
+
+// function  lcm(a,b){
+//   let max=Math.max(a,b);
+//   while(true){
+//     if(max%a===0 && max%b===0){
+//       return max;
+//     }
+//     max++
+//   }
+
+// }
+
+
+// function arr(a){
+//   while(a.length>1){
+//     let em=[];
+
+//     for(i=0;i<a.length-1;i++){
+//       let f=a[i];
+//       let l=a[i+1];
+//       let lee=lcm(f,l);
+//       em.push(lee);
+//     }
+    
+//   a=em;
+//   console.log(a);
+//   }
+//   return a[0];
+ 
+
+// }
+// arr([1,4,5,7,9,4]);
+
+
+function missing(n){
+  let add=0;
+  for(i=0;i<n.length;i++){
+    add+=1;
+    if(add!==n[i]){
+      console.log(add);
     }
-    return a[0]
+  }
 }
-let result=arr([1,2,3,4,5,6]);
-console.log(result);
+missing([1,2,3,4,5,7,8]);
+
+
+function lcm(a,b){
+  let max=Math.max(a,b);
+  while(true){
+    if(max%a===0 && max%b===0){
+      return max;
+    }
+    max++;
+  }
+}
+
+function neqw(a){
+  while(a.length>1){
+    let em=[];
+    for(i=0;i<a.length-1;i++){
+      let f=a[i];
+      let l=a[i+1];
+      let lc=lcm(f,l);
+      em.push(lc);
+    }
+    a=em;
+    console.log(a);
+  }
+  return a[0];
+}
+neqw([1,2,3,45,5]);
+

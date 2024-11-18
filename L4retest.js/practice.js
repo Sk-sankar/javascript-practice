@@ -77,4 +77,37 @@ function calculateTotal(cart) {
     console.log(distinctVowels.length);
 
 }
-countDistinctVowels("hello")
+countDistinctVowels("hello");
+
+
+function large(n){
+    let a= Math.min(...n)
+    console.log(a)
+}
+large([1,2,3,4,5,6]);
+
+
+function re(n){
+    let vowel="aeiou";
+    let dis="";
+    for(let char of n){
+        if(vowel.includes(char) && !dis.includes(char)){
+            dis+=char;
+        }
+    }
+    console.log(dis.length)
+}
+re("hellooo");
+
+function row(n){
+    let ans=n.split("").reverse().join("");
+    if(n==ans){
+        console.log
+        (ans+" "+"this is a palindrom")
+    }
+    else{
+        console.log("not")
+    }
+
+}
+row("momo")
