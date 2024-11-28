@@ -1,12 +1,14 @@
-// let array=[3, 4, 1, 5, 1, 9, 3];
-// for(i=0;i<array.length;i++){
-//     for(j=i+1;j<array.length;j++){
-//         if(array[i]==array[j]){
-//             array.splice(j,1)
-//         }
-//     }
-// }
-// console.log(array);
+let array=[3, 4, 1, 5, 1, 9, 3];
+for(i=0;i<array.length;i++){
+    for(j=i+1;j<array.length;j++){
+        if(array[i]==array[j]){
+            array.splice(j,1)
+        }
+    }
+}
+console.log(array);
+
+
 
 
 // function repeat(a){
