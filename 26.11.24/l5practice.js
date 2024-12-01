@@ -28,7 +28,7 @@ console.log(array);
 //     }
 //     return b;
 // }
-// console.log(repeat([3, 4, 1, 5, 1, 9, 3]))
+// console.log(repeat([3, 4, 1, 5, 1, 9, 3]));
 
 
 
