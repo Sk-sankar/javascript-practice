@@ -24,3 +24,39 @@ for(let ele of Object.keys(obj)){
 }
 return eleamt
 }
+
+
+//https://www.hackerrank.com/challenges/day-of-the-programmer/problem?isFullScreen=true
+
+
+function dayOfProgrammer(year) {
+    
+    let day, month = "09"; 
+        let isLeapYear;
+        if (year < 1918) {
+            
+            isLeapYear = year % 4 === 0;
+        } else if (year > 1918) {
+            
+            isLeapYear = (year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0);
+        }
+    
+     
+        if (year === 1918) {
+            
+            day = 256 - (31 + 15 + 31 + 30 + 31 + 30 + 31 + 31); 
+        } else if (isLeapYear) {
+            // Leap year
+            day = 256 - (31 + 29 + 31 + 30 + 31 + 30 + 31 + 31);
+        } else {
+            // Non-leap year
+            day = 256 - (31 + 28 + 31 + 30 + 31 + 30 + 31 + 31);
+        }
+    
+    
+        if (day < 10) {
+            day = "0" + day; 
+        }
+        return day + "." + month + "." + year;
+    }
+    
