@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disney+ Hotstar Clone</title>
+  <style>
+    /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #141b29;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1f2c3b;
+}
+
+.navbar .logo img {
+  width: 120px;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar nav ul li {
+  display: inline;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar .search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .search-bar input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.hero {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://assets.hotstar.com/media/dplus-originals-promo.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #1f80e0;
+  color: white;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  width: 200px;
+  background-color: #1f2c3b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.card h5 {
+  font-size: 1rem;
+  margin: 10px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin: 10px;
+  color: #ccc;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1f2c3b;
+}
+
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+ Hotstar">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">TV</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Premium</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Unlimited Entertainment, Always</h1>
+      <p>Watch your favorite shows, movies, sports, and more.</p>
+      <button class="btn btn-primary">Get Started</button>
+    </div>
+  </section>
+
+  <section class="content">
+    <h2>Trending Now</h2>
+    <div class="card-container" id="trending"></div>
+  </section>
+
+  <section class="footer">
+    <p>&copy; 2025 Disney+ Hotstar. All rights reserved.</p>
+  </section>
+
+  <script type="Module
+  " src="script.js">
+    const trendingMovies = [
+  { name: "Avengers: Endgame", img: "https://image.tmdb.org/t/p/w200/q6725aR8Zs4IwGMXzZT8aC8lh41.jpg" },
+  { name: "Frozen II", img: "https://image.tmdb.org/t/p/w200/pjeMs3yqRmFL3giJy4PMXWZTTPa.jpg" },
+  { name: "The Mandalorian", img: "https://image.tmdb.org/t/p/w200/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg" },
+  { name: "Loki", img: "https://image.tmdb.org/t/p/w200/kEl2t3OhXc3Zb9FBh1AuYzRTgZp.jpg" },
+];
+
+const trendingContainer = document.getElementById("trending");
+
+const displayTrendingMovies = () => {
+  trendingMovies.forEach((movie) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="${movie.img}" alt="${movie.name}">
+      <h5>${movie.name}</h5>
+    `;
+    trendingContainer.appendChild(card);
+  });
+};
+
+document.addEventListener("DOMContentLoaded", displayTrendingMovies);
+
+  </script>
+</body>
+</html>

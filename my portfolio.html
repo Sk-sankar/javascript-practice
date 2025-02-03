@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+
+    .about-me {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .about-photo {
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">My Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container" data-aos="fade-down">
+      <h1>Hi, I'm [Your Name]</h1>
+      <p>Your go-to web developer and problem solver.</p>
+      <a href="#about" class="btn btn-light">Learn More About Me</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container" data-aos="fade-right">
+      <h2 class="text-center mb-4">About Me</h2>
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+          <img src="your-photo.jpg" alt="Your Photo" class="about-photo" width="200">
+        </div>
+        <div class="col-md-8">
+          <p>
+            I'm a passionate IT professional who loves creating elegant and efficient web solutions. With a focus on front-end and back-end development, I specialize in crafting responsive, user-friendly websites that drive results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-light py-5">
+    <div class="container" data-aos="zoom-in">
+      <h2 class="text-center mb-4">Skills</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <i class="fas fa-code fa-3x mb-3 text-primary"></i>
+          <h5>Web Development</h5>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-database fa-3x mb-3 text-warning"></i>
+          <h5>Database Management</h5>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-laptop fa-3x mb-3 text-success"></i>
+          <h5>Problem Solving</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4" data-aos="fade-left">Projects</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card project-card">
+            <div class="card-body">
+              <h5 class="card-title">E-commerce Website</h5>
+              <p class="card-text">An advanced shopping platform with user-friendly features and secure payment integration.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card project-card">
+            <div class="card-body">
+              <h5 class="card-title">Portfolio Website</h5>
+              <p class="card-text">A responsive portfolio to showcase skills and achievements.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4" data-aos="flip-up">Contact Me</h2>
+      <form id="contact-form" class="mx-auto" style="max-width: 600px;">
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Your Email</label>
+          <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Your Message</label>
+          <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      alert(`Thank you, ${name}. Your message has been sent!`);
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

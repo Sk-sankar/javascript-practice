@@ -70,7 +70,7 @@ function star(c,n){
 
 function printRightAlignedPattern(v) {
     for (let i = 1; i <= 3; i++) {
-        let spaces = ' '.repeat(v); // Create a string of spaces for right alignment
+        let spaces = ' '.repeat(i); // Create a string of spaces for right alignment
         console.log(spaces + '* * *'); // Print spaces followed by the stars
     }
 }

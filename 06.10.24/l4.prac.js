@@ -57,3 +57,4 @@ let scores = [88, 45, 71, 91];
 
 console.log(getTopStudent(names, scores));  
 
+
