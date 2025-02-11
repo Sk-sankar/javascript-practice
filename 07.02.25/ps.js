@@ -21,7 +21,7 @@ console.log(anagram("hello","olleh"))
 
 function missing(arr1){
    let add=0
-    for (i=0;i<arr.;i++){
+    for (i=0;i<arr.length;i++){
          add+=1;
          if(add !=arr1[i]){
             console.log( add);
