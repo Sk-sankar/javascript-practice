@@ -84,16 +84,40 @@
 // console.log(c);
 
 
-let n=5;
-for(i=0;i<=n;i++){
-    for(j=0;j<=n;j++){
-        if(i==0 ||i==n-1 || j==0 || j==n-1 ){
-            console.log("*")
-        }
-        else{
-            console.log(" ")
-        }
+// let n=5;
+// for(i=0;i<=n;i++){
+//     for(j=0;j<=n;j++){
+//         if(i==0 ||i==n-1 || j==0 || j==n-1 ){
+//             console.log("*")
+//         }
+//         else{
+//             console.log(" ")
+//         }
+//     }
+// }
+
+
+
+
+let a = [1, 2,4,44, 55];
+let b = [1,3,8, 11, 23];
+
+let result=[];
+let left=0;
+let right=0;
+
+while(left<a.length && right<b.length){
+    if(a[left]<b[right]){
+        result.push(a[left]);
+        left++;
     }
+    else{
+        result.push(b[right]);
+        right++;
+    }
+  
 }
-
-
+console.log( result
+    .concat(a.slice(left))
+    .concat(b.slice(right))
+)
