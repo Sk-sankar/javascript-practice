@@ -1,3 +1,5 @@
+const { primenumber } = require("../22.02.25/pet");
+
 let a =[2,4,5,6,7,70,22];
 
 for(i=0;i<a.length;i++){
@@ -9,4 +11,5 @@ for(i=0;i<a.length;i++){
         }
     }
 }
-console.log(a)
+console.log(a);
+console.log(primenumber(11));
