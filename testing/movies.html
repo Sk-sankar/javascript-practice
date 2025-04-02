@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies CRUD</title>
+    <script src="./movies.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Movie Management</h2>
+
+    <button onclick="showSection('createForm')">Create Movie</button>
+    <button onclick="showSection('moviesList')">Read All Movies</button>
+    <button onclick="showSection('readByIdForm')">Read Movie by ID</button>
+    <button onclick="showSection('updateForm')">Update Movie</button>
+    <button onclick="showSection('deleteForm')">Delete Movie</button>
+
+    <div id="createForm" class="hidden">
+        <h3>Create Movie</h3>
+        <form id="movieForm">
+            <input type="hidden" id="movie_id">
+            <label>Title:</label>
+            <input type="text" id="title" required>
+
+            <label>Genre:</label>
+            <input type="text" id="genre" required>
+
+            <label>Description:</label>
+            <textarea id="description" required></textarea>
+
+            <label>Category:</label>
+            <input type="text" id="category" required>
+
+            <label>Formats:</label>
+            <input type="text" id="formats" required>
+
+            <label>Duration:</label>
+            <input type="text" id="duration" required>
+
+            <label>Language:</label>
+            <input type="text" id="language" required>
+
+            <label>Release Date:</label>
+            <input type="date" id="release_date" required>
+
+            <label>Trailer Link:</label>
+            <input type="url" id="trailer_link">
+
+            <label>Image URL:</label>
+            <input type="url" id="image_url" required>
+
+            <button type="button" onclick="createMovie()">Submit</button>
+        </form>
+    </div>
+
+    <div id="moviesList" class="hidden">
+        <h3>All Movies</h3>
+        <div id="moviesData"></div>
+    </div>
+
+    <div id="readByIdForm" class="hidden">
+        <h3>Read Movie by ID</h3>
+        <input type="number" id="readMovieId" placeholder="Enter Movie ID">
+        <button onclick="getMovieById()">Get Movie</button>
+        <div id="movieDetails"></div>
+    </div>
+
+    <div id="updateForm" class="hidden">
+        <h3>Update Movie</h3>
+        <input type="number" id="updateMovieId" placeholder="Enter Movie ID">
+        <button onclick="loadMovieForUpdate()">Load Movie</button>
+
+        <form id="updateMovieData" class="hidden">
+            <label>Title:</label>
+            <input type="text" id="updateTitle" required>
+
+            <label>Genre:</label>
+            <input type="text" id="updateGenre" required>
+
+            <label>Description:</label>
+            <textarea id="updateDescription" required></textarea>
+
+            <label>Category:</label>
+            <input type="text" id="updateCategory" required>
+
+            <label>Formats:</label>
+            <input type="text" id="updateFormats" required>
+
+            <label>Duration:</label>
+            <input type="text" id="updateDuration" required>
+
+            <label>Language:</label>
+            <input type="text" id="updateLanguage" required>
+
+            <label>Release Date:</label>
+            <input type="date" id="updateReleaseDate" required>
+
+            <label>Trailer Link:</label>
+            <input type="url" id="updateTrailerLink">
+
+            <label>Image URL:</label>
+            <input type="url" id="updateImageUrl" required>
+
+            <button type="button" onclick="updateMovie()">Update Movie</button>
+        </form>
+    </div>
+
+
+    <div id="deleteForm" class="hidden">
+        <h3>Delete Movie</h3>
+        <input type="number" id="deleteMovieId" placeholder="Enter Movie ID">
+        <button onclick="deleteMovie()">Delete</button>
+    </div>
+</body>
+
+</html>
