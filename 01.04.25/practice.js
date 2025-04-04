@@ -270,14 +270,16 @@
 
 //find the max
 
-// let arr=[4,3,2,32,4,22,234,234,225,534]
-// let max=arr[0]
-// for(i=0;i<arr.length;i++){
-//     if(arr[i]>max){
-//         max=arr[i]
-//     }
-// }
-// console.log(max)
+let arr=[4,3,2,32,4,22,234,234,225,534]
+let max=arr[0]
+for(i=0;i<arr.length;i++){
+    if(arr[i]>max){
+        max=arr[i]
+    }
+}
+console.log(max)
+
+
 
 //find min
 
@@ -333,19 +335,21 @@
 // console.log(mergesort([3,7,3,6,222,34,5,4,54,544]))
 
 
-let myPromise = new Promise((resolve, reject) => {
-    let success = true; // Simulating success/failure
+// let myPromise = new Promise((resolve, reject) => {
+//     let success = true; // Simulating success/failure
 
-    setTimeout(() => {
-        if (success) {
-            resolve("✅ Operation Successful!");
-        } else {
-            reject("❌ Operation Failed!");
-        }
-    }, 2000);
-});
+//     setTimeout(() => {
+//         if (success) {
+//             resolve("✅ Operation Successful!");
+//         } else {
+//             reject("❌ Operation Failed!");
+//         }
+//     }, 2000);
+// });
 
-// Consuming the Promise
-myPromise
-    .then(result => console.log(result)) // Executes if resolved
-    .catch(error => console.log(error)); // Executes if rejected
+// // Consuming the Promise
+// myPromise
+//     .then(result => console.log(result)) // Executes if resolved
+//     .catch(error => console.log(error)); // Executes if rejected
+
+
